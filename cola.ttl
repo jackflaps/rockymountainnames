@@ -32,11 +32,13 @@ cola:relation a rdfs:Class ;
 cola:place a rdfs:Class ;
   rdfs:isDefinedBy "http://cola.jackflaps.net/cola#" ;
   rdfs:label "Place" ;
+  owl:sameAs <http://schema.org/Place> ;
   rdfs:comment "The class of geographic locations of relevance to the cola:agent being described. ISAAR(CPF) 5.2.3" .
 
 cola:date a rdfs:Class ;
   rdfs:isDefinedBy "http://cola.jackflaps.net/cola#" ;
   rdfs:label "Date" ;
+  owl:sameAs <http://schema.org/Date> ;
   rdfs:comment "The class of dates of relevance to the cola:agent being described." .
 
 cola:maintenanceEvent a rdfs:Class ;
@@ -44,140 +46,135 @@ cola:maintenanceEvent a rdfs:Class ;
   rdfs:label "Maintenance Event" ;
   rdfs:comment "The class of events associated with the creation and ongoing maintenance of a cola:agent representation. ISAAR(CPF) 5.4.6, 5.4.9" .
 
-## Relationship properties between the agent and other CoLA classes
+## Relationship properties between CoLA classes
 
 cola:hasIdentity a rdf:Property ;
   rdfs:domain cola:agent ;
   rdfs:range cola:identity ;
-  rdfs:label "has identity" ;
+  rdfs:label "Has identity" ;
   rdfs:comment "The property indicating the existence of a relationship between an agent and an identity for that agent." .
 
 cola:hasPlace a rdf:Property ;
   rdfs:domain cola:agent ;
   rdfs:range cola:place ;
-  rdfs:label "has place" ;
+  rdfs:label "Has place" ;
   rdfs:comment "The property indicating the existence of a relationship between an agent and a geographical location." .
 
 cola:hasDate a rdf:Property ;
   rdfs:domain cola:agent ;
   rdfs:range cola:date ;
-  rdfs:label "has date" ;
+  rdfs:label "Has date" ;
   rdfs:comment "The property indicating a date of importance in the biography or history of an agent." .
 
 cola:hasRelation a rdf:Property ;
   rdfs:domain cola:agent ;
   rdfs:range cola:relation ;
-  rdfs:label "has relationship" ;
+  rdfs:label "Has relation" ;
   rdfs:comment "The property indicating a relationship between two agents." .
 
 cola:hasMaintenanceEvent a rdf:Property ;
   rdfs:domain cola:agent ;
   rdfs:range cola:maintenanceEvent ;
-  rdfs:label "has maintenance event" ;
+  rdfs:label "Has maintenance event" ;
   rdfs:comment "The property indicating the existence of a maintenance event for a cola:agent representation." .
 
 ## Object properties of the cola:agent
 
-cola:hasType a rdf:Property ;
+cola:occupation a rdf:Property ;
   rdfs:domain cola:agent ;
-  rdfs:label "has type" ;
-  rdfs:comment "The type of agent represented: person, corporate body, family, software." .
+  rdfs:label "Occupation" ;
+  rdfs:comment "A professional role held by a person." .
 
-cola:hasOccupation a rdf:Property ;
+cola:function a rdf:Property ;
   rdfs:domain cola:agent ;
-  rdfs:label "has occupation" ;
-  rdfs:comment "An occupation held by an agent." .
+  rdfs:label "Function" ;
+  rdfs:comment "The task performed or purpose served by a corporate body or organization." .
 
-cola:hasFunction a rdf:Property ;
+cola:biogHist a rdf:Property ;
   rdfs:domain cola:agent ;
-  rdfs:label "has function" ;
-  rdfs:comment "The funciton performed by an agent" .
-
-cola:hasBiogHist a rdf:Property ;
-  rdfs:domain cola:agent ;
-  rdfs:label "biography" ;
-  rdfs:comment "The biography or history of the described agent" .
+  rdfs:label "Biographical/Historical Statement" ;
+  rdfs:comment "The biography or history of the agent described" .
 
 ## Object properties of the cola:identity
 
 cola:hasPart a rdf:Property ;
   rdfs:domain cola:identity ;
-  rdfs:label "has part" ;
+  rdfs:label "Has part" ;
   rdfs:comment "A semantically ambiguous part of name of the described identity" .
 
-cola:hasSurname a rdf:Property ;
+cola:surname a rdf:Property ;
   rdfs:domain cola:identity ;
-  rdfs:label "has surname" ;
+  rdfs:label "Surname" ;
   rdfs:comment "The surname of the described identity" .
 
-cola:hasForename a rdf:Property ;
+cola:forename a rdf:Property ;
   rdfs:domain cola:identity ;
-  rdfs:label "has forename" ;
+  rdfs:label "Forename" ;
   rdfs:comment "The forename of the described identity" .
 
-cola:hasPrefix a rdf:Property ;
+cola:prefix a rdf:Property ;
   rdfs:domain cola:identity ;
-  rdfs:label "has prefix" ;
+  rdfs:label "Prefix" ;
   rdfs:comment "The prefix of the described identity" .
 
-cola:hasSuffix a rdf:Property ;
+cola:suffix a rdf:Property ;
   rdfs:domain cola:identity ;
-  rdfs:label "has suffix" ;
+  rdfs:label "Suffix" ;
   rdfs:comment "The suffix of the described identity" .
 
-cola:hasPrimary a rdf:Property ;
+cola:primaryName a rdf:Property ;
   rdfs:domain cola:identity ;
-  rdfs:label "has primary" ;
+  rdfs:label "Primary name" ;
   rdfs:comment "The primary form of name of the described identity" .
 
-cola:hasSubordinate a rdf:Property ;
+cola:subordinateName a rdf:Property ;
   rdfs:domain cola:identity ;
-  rdfs:label "has subordinate" ;
+  rdfs:label "Subordinate name" ;
   rdfs:comment "The subordinate form(s) of name of the described identity" .
 
 cola:hasForm a rdf:Property ;
   rdfs:domain cola:identity ;
-  rdfs:label "has form" ;
+  rdfs:label "Has form" ;
   rdfs:comment "The form of name described within the cola:identity: authorized, alternative, parallel, variant." .
 
 cola:hasRules a rdf:Property ;
   rdfs:domain cola:identity;
-  rdfs:label "has rules" ;
+  rdfs:label "Cataloging rules" ;
   rdfs:comment "The cataloging rules, if any, by which the identity was constructed: DACS, AACR2, RDA, etc." .
 
-cola:hasUseDates a rdf:Property ;
+cola:useDates a rdf:Property ;
   rdfs:domain cola:identity ;
   rdfs:range cola:date ;
-  rdfs:label "has use dates" ;
+  rdfs:label "Use dates" ;
   rdfs:comment "The dates during which the identity form described was used to name the represented agent" .
 
 ## Object properties of the cola:relation
 
 cola:relationType a rdf:Property ;
   rdfs:domain cola:relation ;
-  rdfs:label "relation type" ;
+  rdfs:label "Relation type" ;
   rdfs:comment "The high-level relationship described by the cola:relation, according to EAC-CPF terminology" .
 
 cola:relationEntry a rdf:Property ;
   rdfs:domain cola:relation ;
-  rdfs:label "relation entry" ;
+  rdfs:label "Relation entry" ;
   rdfs:comment "The related agent" .
 
 cola:relationship a rdf:Property ;
   rdfs:domain cola:relation ;
-  rdfs:label "relationship" ;
+  rdfs:label "Relationship" ;
   rdfs:comment "The specific type of relationship described by the cola:relation, narrower in scope than its cola:relationType" .
 
 ## Object properties of the cola:place
 
 cola:placeEntry a rdf:Property ;
   rdfs:domain cola:place ;
-  rdfs:label "place entry" ;
+  rdfs:label "Place entry" ;
   rdfs:comment "The place associated with the agent's cola:hasPlace relationship" .
 
 cola:placeRole a rdf:Property ;
   rdfs:domain cola:place ;
-  rdfs:label "place role" ;
+  rdfs:label "Place role" ;
   rdfs:comment "The role played by the place in the existence of the agent" .
 
 ## Object properties of the cola:date
