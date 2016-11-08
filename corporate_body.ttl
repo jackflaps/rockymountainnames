@@ -1,0 +1,66 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cola: <http://cola.jackflaps.net/cola#> .
+
+<http://cola.jackflaps.net/eac_pers> a cola:Agent ;
+  cola:hasType "corporateBody" ;
+
+  cola:hasIdentity [ a cola:identity ;
+    # how to assign properties a domain within cola:identity based on their agent subclass?
+    cola:hasPrimary "Central City Opera House Association (Central City, Colo.)" ;
+    cola:hasForm "authorized" ;
+    cola:hasRules "DACS"
+  ] ;
+
+  cola:hasIdentity [ a cola:identity ;
+    cola:hasPrimary "University of Denver" ;
+    cola:hasSubordinate "Central City Opera House Association" ;
+    cola:hasForm "alternative"
+  ] ;
+
+  cola:hasIdentity [ a cola:identity ;
+    cola:hasPrimary "Central City Opera" ;
+    cola:hasForm "alternative"
+  ] ;
+
+  cola:hasPlace [ a cola:place ;
+    cola:placeRole "location" ;
+    cola:placeEntry "Central City, Colorado, USA"
+  ] ;
+
+  cola:hasPlace [ a cola:place ;
+    cola:placeRole "incorporation" ;
+    cola:placeEntry "Denver, Colorado, USA"
+  ] ;
+
+  cola:hasBiogHist "Central City Opera is the fifth-oldest opera company in the United States, founded in 1932 by Julie Penrose and Anne Evans. Each festival is presented in the 550-seat historic Central City Opera House built in 1878 in the gold mining era town of Central City, Colorado. Pelham G. Pearce was selected in 1996 as Managing Director for Central City Opera, and he was named General/Artistic Director in May 1998, when John Moriarty became Artistic Director Emeritus." ;
+
+  cola:hasRelation [ a cola:relation ;
+    cola:relationType "associative" ;
+    cola:relationEntry "Penrose, Julia" ;
+    cola:relationship "founder"
+  ] ;
+
+  cola:hasRelation [ a cola:relation ;
+    cola:relationType "associative" ;
+    cola:relationEntry "Evans, Anne" ;
+    cola:relationship "founder"
+  ] ;
+
+  cola:hasRelation [ a cola:relation ;
+    cola:relationType "associative" ;
+    cola:relationEntry <http://cola.jackflaps.net/person/eac> ;
+    cola:relationship "hasPerformer"
+  ] ;
+
+  cola:hasMaintenanceAgency "codu" ;
+  cola:hasDescriptionLanguage "eng" ;
+  cola:hasDescriptionScript "Latn" ;
+
+  cola:hasMaintenanceEvent [ a cola:maintenanceEvent ;
+    cola:eventType "created" ;
+    cola:eventDate "2016-10-14" ;
+    cola:eventDescription "record created" ;
+    cola:eventAgentType "human" ;
+    cola:eventAgent "kclair"
+  ] .

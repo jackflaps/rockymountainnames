@@ -1,0 +1,79 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cola: <http://cola.jackflaps.net/cola#> .
+
+<http://cola.jackflaps.net/eac_pers> a cola:Agent ;
+  cola:hasType "person" ;
+
+  cola:hasIdentity [ a cola:identity ;
+    # how to assign properties a domain within cola:identity based on their agent subclass?
+    cola:hasSurname "Ordassy" ;
+    cola:hasForename "Carlotta" ;
+    cola:hasForm "authorized" ;
+    cola:hasRules "DACS" ;
+    cola:hasUseDates [ a cola:date ;
+      cola:fromDate "1921-05-02" ;
+      cola:toDate "2006-10-11"
+    ]
+  ] ;
+
+  cola:hasIdentity [ a cola:identity ;
+    cola:hasPart "Ordassy, Carlottie" ;
+    cola:hasForm "alternative";
+    cola:hasRules "DACS"
+  ] ;
+
+  cola:hasPlace [ a cola:place ;
+    cola:placeRole "birth" ;
+    cola:placeEntry "Budapest, Hungary"
+  ] ;
+
+  cola:hasPlace [ a cola:place ;
+    cola:placeRole "death" ;
+    cola:placeEntry "Cortland, New York, USA"
+  ] ;
+
+  cola:hasDate [ a cola:date ;
+    cola:fromDate "1921-05-02" ;
+    cola:toDate "2006-10-11"
+  ] ;
+
+  cola:hasOccupation "opera singer" ;
+  cola:hasOccupation "soprano" ;
+  cola:hasBiogHist "A stalwart of the Metropolitan Opera roster for some twenty years, the soprano received her diploma from the Budapest Academy of Music in 1947, the same year that she won second prize in the prestigious International Music Competition in Geneva. (First prize went to a young Spanish soprano named Victoria de los Angeles.) Ordassy then studied with Gina Cigna at the La Scala School in Milan before making her professional debut in 1950, as Second Lady in a La Scala Die Zauberflöte conducted by Otto Klemperer. After emigrating to the U.S., she studied voice in Manhattan and won a scholarship and a Met contract on the 1956 Auditions of the Air radio series. Her Met debut, as Gerhilde in Die Walküre, on January 22, 1957, began an association with the company that included more than 760 appearances in New York and on tour. Ordassy sang Alisa in 118 Met Lucia di Lammermoors - her Lucias included Joan Sutherland, Beverly Sills, Renata Scotto and Anna Moffo - and 109 Rigoletto Giovannas. Other frequent Met assignments for the soprano included Ines in Il Trovatore, Cura in La Forza del Destino, the Aida Priestess, Clotilde in Norma, Marianne in Der Rosenkavalier and Kate Pinkerton. Ordassy sang the Falcon in the Met premiere of Die Frau ohne Schatten (1966), as well as taking part in the company premieres of Macbeth (Lady in Waiting, 1959), Nabucco (Anna, 1960) and The Last Savage (Businesswoman, 1964). Her final Met performance was in 1977, as Ines. She was married to Ukrainian bass Wolodimir Baransky, whom she met while he was a fellow student at the La Scala school, and is survived by their sons, Walter and Yurij." ;
+
+  cola:hasRelation [ a cola:relation ;
+    cola:relationType "family" ;
+    cola:relationEntry "Baransky, Wolodimir" ;
+    cola:relationship "partner"
+  ] ;
+
+  cola:hasRelation [ a cola:relation ;
+    cola:relationType "family" ;
+    cola:relationEntry "Baransky, Walter" ;
+    cola:relationship "child"
+  ] ;
+
+  cola:hasRelation [ a cola:relation ;
+    cola:relationType "family" ;
+    cola:relationEntry "Baransky, Yurij" ;
+    cola:relationship "child"
+  ] ;
+
+  cola:hasRelation [ a cola:relation ;
+    cola:relationType "associative" ;
+    cola:relationEntry "Central City Opera House Association (Central City, Colo.)" ;
+    cola:relationship "performer"
+  ] ;
+
+  cola:hasMaintenanceAgency "codu" ;
+  cola:hasDescriptionLanguage "eng" ;
+  cola:hasDescriptionScript "Latn" ;
+
+  cola:hasMaintenanceEvent [ a cola:maintenanceEvent ;
+    cola:eventType "created" ;
+    cola:eventDate "2016-10-14" ;
+    cola:eventDescription "record created" ;
+    cola:eventAgentType "human" ;
+    cola:eventAgent "kclair"
+  ] .
