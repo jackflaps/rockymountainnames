@@ -1,10 +1,16 @@
-# Colorado Local Authorities
+# About the project
 
-The Colorado Local Authorities (CoLA) project is a pilot with two goals in mind:
+Colorado Local Authorities (CoLA) is a project that aims to provide publishing and access services for biographical and historical information about people, organizations, and families of interest to cultural institutions in Colorado and Wyoming. It is complementary to national services in this domain such as [id.loc.gov](https://id.loc.gov) and the [Social Networks and Archival Context (SNAC)](http://socialarchive.iath.virginia.edu) project, and shares goals with other regional name authority efforts underway across the country.
 
-1. Model and publish RDF data for local names of creators and subjects of cultural heritage materials in the Colorado-Wyoming region
-2. Lower the barriers for small cultural heritage institutions to contribute their metadata to larger linked data projects
+A small website with some sample authority data relevant to the CoLA project scope may be found [here](http://jackflaps.net/cola).
 
-Here are published authority record examples, data dictionaries, and RDF data modeling documents related to the CoLA project.
+# What's here
 
-Questions may be directed to Kevin Clair, Digital Initiatives Librarian at the University of Denver: kevin.clair at du.edu. 
+Project information and design documents may be found on our [wiki](wiki). This repository also contains record examples, data dictionaries, and design documents related to the CoLA project.
+
+# Contact
+
+Questions may be directed to Kevin Clair, Metadata and Digitization Librarian at the University of Denver, via:
+
+* [e-mail](mailto:kevin.clair@du.edu)
+* [twitter](https://twitter.com/jackflaps)
